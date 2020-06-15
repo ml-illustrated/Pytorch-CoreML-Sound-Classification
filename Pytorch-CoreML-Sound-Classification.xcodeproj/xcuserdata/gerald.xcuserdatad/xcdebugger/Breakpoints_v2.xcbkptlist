@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2B67870E-F4C2-40D4-93D5-0D0C77D1274C"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "ED7D818C-AB20-4197-9010-61CD48999F9D"
+            shouldBeEnabled = "Yes"
+            nameForDebugger = "ANE"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "-[_ANEModel program]"
+            moduleName = "">
+            <Locations>
+               <Location
+                  uuid = "ED7D818C-AB20-4197-9010-61CD48999F9D - babf2b672926f7f5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[_ANEModel program]"
+                  moduleName = "AppleNeuralEngine"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "423AF4EC-695D-4190-A932-552A9BB45CA5"
+            shouldBeEnabled = "Yes"
+            nameForDebugger = "GPU"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "Espresso::MPSEngine"
+            moduleName = "">
+            <Locations>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "7C23C746-87CA-494A-A06C-88D15E4946C0"
+            shouldBeEnabled = "Yes"
+            nameForDebugger = "ANE 2"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "Espresso::ANERuntimeEngine"
+            moduleName = "">
+            <Locations>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "73A0C327-84E2-4F86-9D74-2E3697F2E08E"
+            shouldBeEnabled = "Yes"
+            nameForDebugger = "CPU"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "Espresso::BNNSEngine"
+            moduleName = "">
+            <Locations>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "05A57D5D-9624-43B0-8A12-C077C96BF662"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pytorch-CoreML-Sound-Classification/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
+            landmarkName = "startAudioEngine()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

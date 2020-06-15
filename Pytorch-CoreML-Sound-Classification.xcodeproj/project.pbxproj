@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		741B2DA32496E94800020939 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B2DA22496E94800020939 /* AppDelegate.swift */; };
+		741B2DA52496E94800020939 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B2DA42496E94800020939 /* SceneDelegate.swift */; };
+		741B2DA72496E94800020939 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B2DA62496E94800020939 /* ViewController.swift */; };
+		741B2DAA2496E94800020939 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 741B2DA82496E94800020939 /* Main.storyboard */; };
+		741B2DAC2496E94B00020939 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 741B2DAB2496E94B00020939 /* Assets.xcassets */; };
+		741B2DAF2496E94B00020939 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 741B2DAD2496E94B00020939 /* LaunchScreen.storyboard */; };
+		741B2DBA2496E94B00020939 /* Pytorch_CoreML_Sound_ClassificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B2DB92496E94B00020939 /* Pytorch_CoreML_Sound_ClassificationTests.swift */; };
+		741B2DCC2496EC2700020939 /* DrawSpecView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B2DCB2496EC2700020939 /* DrawSpecView.swift */; };
+		741B2DCE2496ED5100020939 /* ConvertSpectrogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B2DCD2496ED5100020939 /* ConvertSpectrogram.swift */; };
+		741B2DCF2496ED5100020939 /* ConvertSpectrogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B2DCD2496ED5100020939 /* ConvertSpectrogram.swift */; };
+		741B2DD12496F21900020939 /* PANN_out.ring_hello.json in Resources */ = {isa = PBXBuildFile; fileRef = 741B2DD02496F21900020939 /* PANN_out.ring_hello.json */; };
+		741B2DD32496F21F00020939 /* ring_hello.wav in Resources */ = {isa = PBXBuildFile; fileRef = 741B2DD22496F21F00020939 /* ring_hello.wav */; };
+		741B2DD52496F22F00020939 /* PANN.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 741B2DD42496F22F00020939 /* PANN.mlmodel */; };
+		741B2DD62496F22F00020939 /* PANN.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 741B2DD42496F22F00020939 /* PANN.mlmodel */; };
+		741B2DDE2497221600020939 /* PANN_labels.json in Resources */ = {isa = PBXBuildFile; fileRef = 741B2DDD2497221600020939 /* PANN_labels.json */; };
+		741B2DE02497221C00020939 /* PANN_labels.json in Resources */ = {isa = PBXBuildFile; fileRef = 741B2DDF2497221C00020939 /* PANN_labels.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		741B2DB62496E94B00020939 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 741B2D972496E94800020939 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 741B2D9E2496E94800020939;
+			remoteInfo = "Pytorch-CoreML-Sound-Classification";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		741B2D9F2496E94800020939 /* Pytorch-CoreML-Sound-Classification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pytorch-CoreML-Sound-Classification.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		741B2DA22496E94800020939 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		741B2DA42496E94800020939 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		741B2DA62496E94800020939 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		741B2DA92496E94800020939 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		741B2DAB2496E94B00020939 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		741B2DAE2496E94B00020939 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		741B2DB02496E94B00020939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		741B2DB52496E94B00020939 /* Pytorch-CoreML-Sound-ClassificationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pytorch-CoreML-Sound-ClassificationTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		741B2DB92496E94B00020939 /* Pytorch_CoreML_Sound_ClassificationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pytorch_CoreML_Sound_ClassificationTests.swift; sourceTree = "<group>"; };
+		741B2DBB2496E94B00020939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		741B2DCB2496EC2700020939 /* DrawSpecView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawSpecView.swift; sourceTree = "<group>"; };
+		741B2DCD2496ED5100020939 /* ConvertSpectrogram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertSpectrogram.swift; sourceTree = "<group>"; };
+		741B2DD02496F21900020939 /* PANN_out.ring_hello.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PANN_out.ring_hello.json; sourceTree = "<group>"; };
+		741B2DD22496F21F00020939 /* ring_hello.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ring_hello.wav; sourceTree = "<group>"; };
+		741B2DD42496F22F00020939 /* PANN.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PANN.mlmodel; sourceTree = "<group>"; };
+		741B2DDD2497221600020939 /* PANN_labels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PANN_labels.json; sourceTree = "<group>"; };
+		741B2DDF2497221C00020939 /* PANN_labels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PANN_labels.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		741B2D9C2496E94800020939 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		741B2DB22496E94B00020939 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		741B2D962496E94800020939 = {
+			isa = PBXGroup;
+			children = (
+				741B2DA12496E94800020939 /* Pytorch-CoreML-Sound-Classification */,
+				741B2DB82496E94B00020939 /* Pytorch-CoreML-Sound-ClassificationTests */,
+				741B2DA02496E94800020939 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		741B2DA02496E94800020939 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				741B2D9F2496E94800020939 /* Pytorch-CoreML-Sound-Classification.app */,
+				741B2DB52496E94B00020939 /* Pytorch-CoreML-Sound-ClassificationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		741B2DA12496E94800020939 /* Pytorch-CoreML-Sound-Classification */ = {
+			isa = PBXGroup;
+			children = (
+				741B2DA22496E94800020939 /* AppDelegate.swift */,
+				741B2DA42496E94800020939 /* SceneDelegate.swift */,
+				741B2DA62496E94800020939 /* ViewController.swift */,
+				741B2DCD2496ED5100020939 /* ConvertSpectrogram.swift */,
+				741B2DCB2496EC2700020939 /* DrawSpecView.swift */,
+				741B2DD42496F22F00020939 /* PANN.mlmodel */,
+				741B2DDD2497221600020939 /* PANN_labels.json */,
+				741B2DA82496E94800020939 /* Main.storyboard */,
+				741B2DAB2496E94B00020939 /* Assets.xcassets */,
+				741B2DAD2496E94B00020939 /* LaunchScreen.storyboard */,
+				741B2DB02496E94B00020939 /* Info.plist */,
+			);
+			path = "Pytorch-CoreML-Sound-Classification";
+			sourceTree = "<group>";
+		};
+		741B2DB82496E94B00020939 /* Pytorch-CoreML-Sound-ClassificationTests */ = {
+			isa = PBXGroup;
+			children = (
+				741B2DD02496F21900020939 /* PANN_out.ring_hello.json */,
+				741B2DDF2497221C00020939 /* PANN_labels.json */,
+				741B2DD22496F21F00020939 /* ring_hello.wav */,
+				741B2DB92496E94B00020939 /* Pytorch_CoreML_Sound_ClassificationTests.swift */,
+				741B2DBB2496E94B00020939 /* Info.plist */,
+			);
+			path = "Pytorch-CoreML-Sound-ClassificationTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		741B2D9E2496E94800020939 /* Pytorch-CoreML-Sound-Classification */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 741B2DBE2496E94B00020939 /* Build configuration list for PBXNativeTarget "Pytorch-CoreML-Sound-Classification" */;
+			buildPhases = (
+				741B2D9B2496E94800020939 /* Sources */,
+				741B2D9C2496E94800020939 /* Frameworks */,
+				741B2D9D2496E94800020939 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pytorch-CoreML-Sound-Classification";
+			productName = "Pytorch-CoreML-Sound-Classification";
+			productReference = 741B2D9F2496E94800020939 /* Pytorch-CoreML-Sound-Classification.app */;
+			productType = "com.apple.product-type.application";
+		};
+		741B2DB42496E94B00020939 /* Pytorch-CoreML-Sound-ClassificationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 741B2DC12496E94B00020939 /* Build configuration list for PBXNativeTarget "Pytorch-CoreML-Sound-ClassificationTests" */;
+			buildPhases = (
+				741B2DB12496E94B00020939 /* Sources */,
+				741B2DB22496E94B00020939 /* Frameworks */,
+				741B2DB32496E94B00020939 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				741B2DB72496E94B00020939 /* PBXTargetDependency */,
+			);
+			name = "Pytorch-CoreML-Sound-ClassificationTests";
+			productName = "Pytorch-CoreML-Sound-ClassificationTests";
+			productReference = 741B2DB52496E94B00020939 /* Pytorch-CoreML-Sound-ClassificationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		741B2D972496E94800020939 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = Gerald;
+				TargetAttributes = {
+					741B2D9E2496E94800020939 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					741B2DB42496E94B00020939 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 741B2D9E2496E94800020939;
+					};
+				};
+			};
+			buildConfigurationList = 741B2D9A2496E94800020939 /* Build configuration list for PBXProject "Pytorch-CoreML-Sound-Classification" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 741B2D962496E94800020939;
+			productRefGroup = 741B2DA02496E94800020939 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				741B2D9E2496E94800020939 /* Pytorch-CoreML-Sound-Classification */,
+				741B2DB42496E94B00020939 /* Pytorch-CoreML-Sound-ClassificationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		741B2D9D2496E94800020939 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				741B2DAF2496E94B00020939 /* LaunchScreen.storyboard in Resources */,
+				741B2DAC2496E94B00020939 /* Assets.xcassets in Resources */,
+				741B2DAA2496E94800020939 /* Main.storyboard in Resources */,
+				741B2DDE2497221600020939 /* PANN_labels.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		741B2DB32496E94B00020939 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				741B2DD12496F21900020939 /* PANN_out.ring_hello.json in Resources */,
+				741B2DD32496F21F00020939 /* ring_hello.wav in Resources */,
+				741B2DE02497221C00020939 /* PANN_labels.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		741B2D9B2496E94800020939 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				741B2DA72496E94800020939 /* ViewController.swift in Sources */,
+				741B2DCC2496EC2700020939 /* DrawSpecView.swift in Sources */,
+				741B2DA32496E94800020939 /* AppDelegate.swift in Sources */,
+				741B2DD52496F22F00020939 /* PANN.mlmodel in Sources */,
+				741B2DA52496E94800020939 /* SceneDelegate.swift in Sources */,
+				741B2DCE2496ED5100020939 /* ConvertSpectrogram.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		741B2DB12496E94B00020939 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				741B2DD62496F22F00020939 /* PANN.mlmodel in Sources */,
+				741B2DBA2496E94B00020939 /* Pytorch_CoreML_Sound_ClassificationTests.swift in Sources */,
+				741B2DCF2496ED5100020939 /* ConvertSpectrogram.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		741B2DB72496E94B00020939 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 741B2D9E2496E94800020939 /* Pytorch-CoreML-Sound-Classification */;
+			targetProxy = 741B2DB62496E94B00020939 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		741B2DA82496E94800020939 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				741B2DA92496E94800020939 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		741B2DAD2496E94B00020939 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				741B2DAE2496E94B00020939 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		741B2DBC2496E94B00020939 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		741B2DBD2496E94B00020939 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		741B2DBF2496E94B00020939 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K6KE3UBBT4;
+				INFOPLIST_FILE = "Pytorch-CoreML-Sound-Classification/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "my.testco.Pytorch-CoreML-Sound-Classification";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		741B2DC02496E94B00020939 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K6KE3UBBT4;
+				INFOPLIST_FILE = "Pytorch-CoreML-Sound-Classification/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "my.testco.Pytorch-CoreML-Sound-Classification";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		741B2DC22496E94B00020939 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K6KE3UBBT4;
+				INFOPLIST_FILE = "Pytorch-CoreML-Sound-ClassificationTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "my.testco.Pytorch-CoreML-Sound-ClassificationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pytorch-CoreML-Sound-Classification.app/Pytorch-CoreML-Sound-Classification";
+			};
+			name = Debug;
+		};
+		741B2DC32496E94B00020939 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K6KE3UBBT4;
+				INFOPLIST_FILE = "Pytorch-CoreML-Sound-ClassificationTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "my.testco.Pytorch-CoreML-Sound-ClassificationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pytorch-CoreML-Sound-Classification.app/Pytorch-CoreML-Sound-Classification";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		741B2D9A2496E94800020939 /* Build configuration list for PBXProject "Pytorch-CoreML-Sound-Classification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				741B2DBC2496E94B00020939 /* Debug */,
+				741B2DBD2496E94B00020939 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		741B2DBE2496E94B00020939 /* Build configuration list for PBXNativeTarget "Pytorch-CoreML-Sound-Classification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				741B2DBF2496E94B00020939 /* Debug */,
+				741B2DC02496E94B00020939 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		741B2DC12496E94B00020939 /* Build configuration list for PBXNativeTarget "Pytorch-CoreML-Sound-ClassificationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				741B2DC22496E94B00020939 /* Debug */,
+				741B2DC32496E94B00020939 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 741B2D972496E94800020939 /* Project object */;
+}
