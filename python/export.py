@@ -34,28 +34,17 @@ class MobileNetV1Export(MobileNetV1):
 
         # frames_num = x.shape[2]
 
-        # print( 'x shape: ', x.shape ) # x shape:  torch.Size([1, 1, 701, 64])
         x = x.transpose(1, 3)
         x = self.bn0(x)
         x = x.transpose(1, 3)
         
-        if self.training:
-            x = self.spec_augmenter(x)
-
-        # Mixup on spectrogram
-        if self.training and mixup_lambda is not None:
-            x = do_mixup(x, mixup_lambda)
-        
         x = self.features(x)
-        # print( 'features: ', x.shape ) #  (1, 1024, 3, 2)
 
         x = torch.mean(x, dim=3)
-        # print( 'x mean: ', x.shape ) # x mean:  torch.Size([1, 1024, 3])
 
         x1 = F.max_pool1d(x, kernel_size=3, stride=1, padding=1)
         x2 = F.avg_pool1d(x, kernel_size=3, stride=1, padding=1)
         x = x1 + x2
-        # print( x.shape, x1.shape, x2.shape )
 
         x = F.dropout(x, p=0.5, training=self.training)
         x = x.transpose(1, 2)
@@ -78,8 +67,6 @@ class MobileNetV1Export(MobileNetV1):
         
         for output in torch_outputs:
             print( 'out: ', output.shape )
-        # out:  torch.Size([1, 96, 527])
-        # out:  torch.Size([1, 1, 101, 64])
 
         return torch_outputs
 
@@ -92,8 +79,8 @@ class MobileNetV1Export(MobileNetV1):
             self,
             torch.from_numpy( sample_input ),
             filename_onnx,
-            #input_names=input_names,
-            #output_names=output_names,
+            input_names=input_names,
+            output_names=output_names,
             verbose=False,
             # operator_export_type=OperatorExportTypes.ONNX
         )
@@ -104,7 +91,6 @@ class MobileNetV1Export(MobileNetV1):
         session = onnxruntime.InferenceSession( filename_onnx, None)
         
         input_name = session.get_inputs()[0].name
-        # output_names = [ item.name for item in session.get_outputs() ]
 
         raw_results = session.run([], {input_name: sample_input})
 
@@ -122,7 +108,7 @@ class MobileNetV1Export(MobileNetV1):
         convert_params = dict(
             predicted_feature_name = [],
             minimum_ios_deployment_target='13',
-            # custom_conversion_functions={'Pad':_convert_pad}, # no longer needed
+            custom_conversion_functions={'Pad':_convert_pad},
         )
 
         mlmodel = onnx_coreml.convert(
@@ -163,7 +149,7 @@ def _convert_pad(builder, node, graph, err):
     pads = node.attrs['pads']
     print( 'node.name: ', node.name, pads )
     
-    if node.name != 'Pad_136':
+    if node.name != '311': # hardcoded..
         _convert_pad_orig( builder, node, graph, err )
 
     else:
@@ -243,7 +229,6 @@ def save_model_output_as_json( fn_output, model_outputs ):
 
     
 if __name__ == '__main__':
-    # checkpoint_path = 'MobileNetV1_mAP=0.389.pth'
     import sys
     checkpoint_path = sys.argv[1]
     audio_path = sys.argv[2]
@@ -254,14 +239,16 @@ if __name__ == '__main__':
 
     export_model( fn_mlmodel, fn_json, fn_label_json, checkpoint_path, audio_path )
 
-# python3 python/export.py 'python/MobileNetV1_mAP=0.389.pth' '/tmp/ring_hello.wav'
+
+# python3 python/export.py 'python/MobileNetV1_mAP=0.389.pth' python/audioset_tagging_cnn/examples/R9_ZSCveAHg_7s.wav    
+# python3 python/export.py 'python/MobileNetV1_mAP=0.389.pth' /tmp/ring_hello.wav
 # xcrun coremlc compile /tmp/PANN.mlmodel  /tmp/mlc_output
 
 
 '''
 import soundfile as sf
 
-fn_wav = 'R9_ZSCveAHg_7s.wav'
+fn_wav = 'python/audioset_tagging_cnn/examples/R9_ZSCveAHg_7s.wav'
 
 waveform, samplerate = sf.read( fn_wav )
 # samplerate is 32000
