@@ -1,0 +1,3 @@
+[submodule "python/audioset_tagging_cnn"]
+	path = python/audioset_tagging_cnn
+	url = https://github.com/qiuqiangkong/audioset_tagging_cnn

@@ -1,0 +1,12 @@
+matplotlib==3.0.3
+soundfile==0.10.3.post1
+librosa==0.6.3
+torch==1.0.1.post2
+# torchlibrosa
+-e git://github.com/ml-illustrated/torchlibrosa.git#egg=torchlibrosa
+onnx==1.5.0
+onnx-coreml==1.3
+onnxruntime==1.3.0
+coremltools==3.4
+
+
