@@ -239,8 +239,9 @@ if __name__ == '__main__':
 
     export_model( fn_mlmodel, fn_json, fn_label_json, checkpoint_path, audio_path )
 
-
-# python3 python/export.py 'python/MobileNetV1_mAP=0.389.pth' python/audioset_tagging_cnn/examples/R9_ZSCveAHg_7s.wav    
+# with CoreML convert error but still usable
+# python3 python/export.py 'python/MobileNetV1_mAP=0.389.pth' python/audioset_tagging_cnn/examples/R9_ZSCveAHg_7s.wav
+# without convert error, used in final version
 # python3 python/export.py 'python/MobileNetV1_mAP=0.389.pth' /tmp/ring_hello.wav
 # xcrun coremlc compile /tmp/PANN.mlmodel  /tmp/mlc_output
 

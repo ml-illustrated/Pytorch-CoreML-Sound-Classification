@@ -1,0 +1,180 @@
+$ python3 python/export.py 'python/MobileNetV1_mAP=0.389.pth' /tmp/ring_hello.wav
+waveform:  (1, 12800)
+1/157: Converting Node Type Unsqueeze
+2/157: Converting Node Type Unsqueeze
+3/157: Converting Node Type Pad
+node.name:  177 [0, 0, 512, 0, 0, 0, 512, 0]
+4/157: Converting Node Type Squeeze
+5/157: Converting Node Type Conv
+6/157: Converting Node Type Conv
+7/157: Converting Node Type Unsqueeze
+8/157: Converting Node Type Transpose
+9/157: Converting Node Type Unsqueeze
+10/157: Converting Node Type Transpose
+11/157: Converting Node Type Pow
+12/157: Converting Node Type Pow
+13/157: Converting Node Type Add
+14/157: Converting Node Type MatMul
+15/157: Converting Node Type Clip
+16/157: Converting Node Type Log
+17/157: Converting Node Type Mul
+18/157: Converting Node Type Div
+19/157: Converting Node Type Transpose
+20/157: Converting Node Type BatchNormalization
+21/157: Converting Node Type Transpose
+22/157: Converting Node Type Conv
+23/157: Converting Node Type Pad
+node.name:  201 [0, 0, 0, 0, 0, 0, 0, 0]
+24/157: Converting Node Type AveragePool
+25/157: Converting Node Type BatchNormalization
+26/157: Converting Node Type Relu
+27/157: Converting Node Type Conv
+28/157: Converting Node Type Pad
+node.name:  206 [0, 0, 0, 0, 0, 0, 0, 0]
+29/157: Converting Node Type AveragePool
+30/157: Converting Node Type BatchNormalization
+31/157: Converting Node Type Relu
+32/157: Converting Node Type Conv
+33/157: Converting Node Type BatchNormalization
+34/157: Converting Node Type Relu
+35/157: Converting Node Type Conv
+36/157: Converting Node Type Pad
+node.name:  214 [0, 0, 0, 0, 0, 0, 0, 0]
+37/157: Converting Node Type AveragePool
+38/157: Converting Node Type BatchNormalization
+39/157: Converting Node Type Relu
+40/157: Converting Node Type Conv
+41/157: Converting Node Type BatchNormalization
+42/157: Converting Node Type Relu
+43/157: Converting Node Type Conv
+44/157: Converting Node Type Pad
+node.name:  222 [0, 0, 0, 0, 0, 0, 0, 0]
+45/157: Converting Node Type AveragePool
+46/157: Converting Node Type BatchNormalization
+47/157: Converting Node Type Relu
+48/157: Converting Node Type Conv
+49/157: Converting Node Type BatchNormalization
+50/157: Converting Node Type Relu
+51/157: Converting Node Type Conv
+52/157: Converting Node Type Pad
+node.name:  230 [0, 0, 0, 0, 0, 0, 0, 0]
+53/157: Converting Node Type AveragePool
+54/157: Converting Node Type BatchNormalization
+55/157: Converting Node Type Relu
+56/157: Converting Node Type Conv
+57/157: Converting Node Type BatchNormalization
+58/157: Converting Node Type Relu
+59/157: Converting Node Type Conv
+60/157: Converting Node Type Pad
+node.name:  238 [0, 0, 0, 0, 0, 0, 0, 0]
+61/157: Converting Node Type AveragePool
+62/157: Converting Node Type BatchNormalization
+63/157: Converting Node Type Relu
+64/157: Converting Node Type Conv
+65/157: Converting Node Type BatchNormalization
+66/157: Converting Node Type Relu
+67/157: Converting Node Type Conv
+68/157: Converting Node Type Pad
+node.name:  246 [0, 0, 0, 0, 0, 0, 0, 0]
+69/157: Converting Node Type AveragePool
+70/157: Converting Node Type BatchNormalization
+71/157: Converting Node Type Relu
+72/157: Converting Node Type Conv
+73/157: Converting Node Type BatchNormalization
+74/157: Converting Node Type Relu
+75/157: Converting Node Type Conv
+76/157: Converting Node Type Pad
+node.name:  254 [0, 0, 0, 0, 0, 0, 0, 0]
+77/157: Converting Node Type AveragePool
+78/157: Converting Node Type BatchNormalization
+79/157: Converting Node Type Relu
+80/157: Converting Node Type Conv
+81/157: Converting Node Type BatchNormalization
+82/157: Converting Node Type Relu
+83/157: Converting Node Type Conv
+84/157: Converting Node Type Pad
+node.name:  262 [0, 0, 0, 0, 0, 0, 0, 0]
+85/157: Converting Node Type AveragePool
+86/157: Converting Node Type BatchNormalization
+87/157: Converting Node Type Relu
+88/157: Converting Node Type Conv
+89/157: Converting Node Type BatchNormalization
+90/157: Converting Node Type Relu
+91/157: Converting Node Type Conv
+92/157: Converting Node Type Pad
+node.name:  270 [0, 0, 0, 0, 0, 0, 0, 0]
+93/157: Converting Node Type AveragePool
+94/157: Converting Node Type BatchNormalization
+95/157: Converting Node Type Relu
+96/157: Converting Node Type Conv
+97/157: Converting Node Type BatchNormalization
+98/157: Converting Node Type Relu
+99/157: Converting Node Type Conv
+100/157: Converting Node Type Pad
+node.name:  278 [0, 0, 0, 0, 0, 0, 0, 0]
+101/157: Converting Node Type AveragePool
+102/157: Converting Node Type BatchNormalization
+103/157: Converting Node Type Relu
+104/157: Converting Node Type Conv
+105/157: Converting Node Type BatchNormalization
+106/157: Converting Node Type Relu
+107/157: Converting Node Type Conv
+108/157: Converting Node Type Pad
+node.name:  286 [0, 0, 0, 0, 0, 0, 0, 0]
+109/157: Converting Node Type AveragePool
+110/157: Converting Node Type BatchNormalization
+111/157: Converting Node Type Relu
+112/157: Converting Node Type Conv
+113/157: Converting Node Type BatchNormalization
+114/157: Converting Node Type Relu
+115/157: Converting Node Type Conv
+116/157: Converting Node Type Pad
+node.name:  294 [0, 0, 0, 0, 0, 0, 0, 0]
+117/157: Converting Node Type AveragePool
+118/157: Converting Node Type BatchNormalization
+119/157: Converting Node Type Relu
+120/157: Converting Node Type Conv
+121/157: Converting Node Type BatchNormalization
+122/157: Converting Node Type Relu
+123/157: Converting Node Type Conv
+124/157: Converting Node Type Pad
+node.name:  302 [0, 0, 0, 0, 0, 0, 0, 0]
+125/157: Converting Node Type AveragePool
+126/157: Converting Node Type BatchNormalization
+127/157: Converting Node Type Relu
+128/157: Converting Node Type Conv
+129/157: Converting Node Type BatchNormalization
+130/157: Converting Node Type Relu
+131/157: Converting Node Type ReduceMean
+132/157: Converting Node Type MaxPool
+133/157: Converting Node Type Pad
+node.name:  311 [0, 0, 1, 0, 0, 1]
+134/157: Converting Node Type AveragePool
+135/157: Converting Node Type Add
+136/157: Converting Node Type Transpose
+137/157: Converting Node Type MatMul
+138/157: Converting Node Type Add
+139/157: Converting Node Type Relu
+140/157: Converting Node Type MatMul
+141/157: Converting Node Type Add
+142/157: Converting Node Type Sigmoid
+143/157: Converting Node Type ReduceMax
+144/157: Converting Node Type Shape
+145/157: Converting Node Type Gather
+146/157: Converting Node Type Shape
+147/157: Converting Node Type Gather
+148/157: Converting Node Type Shape
+149/157: Converting Node Type Gather
+150/157: Converting Node Type Unsqueeze
+151/157: Converting Node Type Tile
+152/157: Converting Node Type Mul
+153/157: Converting Node Type Unsqueeze
+154/157: Converting Node Type Unsqueeze
+155/157: Converting Node Type Unsqueeze
+156/157: Converting Node Type Concat
+157/157: Converting Node Type Reshape
+Translation to CoreML spec completed. Now compiling the CoreML model.
+Model Compilation done.
+out:  (1, 527)
+out:  (1, 32, 527)
+out:  (1, 1, 41, 64)

@@ -17,12 +17,12 @@
 		741B2DCC2496EC2700020939 /* DrawSpecView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B2DCB2496EC2700020939 /* DrawSpecView.swift */; };
 		741B2DCE2496ED5100020939 /* ConvertSpectrogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B2DCD2496ED5100020939 /* ConvertSpectrogram.swift */; };
 		741B2DCF2496ED5100020939 /* ConvertSpectrogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B2DCD2496ED5100020939 /* ConvertSpectrogram.swift */; };
-		741B2DD12496F21900020939 /* PANN_out.ring_hello.json in Resources */ = {isa = PBXBuildFile; fileRef = 741B2DD02496F21900020939 /* PANN_out.ring_hello.json */; };
-		741B2DD32496F21F00020939 /* ring_hello.wav in Resources */ = {isa = PBXBuildFile; fileRef = 741B2DD22496F21F00020939 /* ring_hello.wav */; };
-		741B2DD52496F22F00020939 /* PANN.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 741B2DD42496F22F00020939 /* PANN.mlmodel */; };
-		741B2DD62496F22F00020939 /* PANN.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 741B2DD42496F22F00020939 /* PANN.mlmodel */; };
-		741B2DDE2497221600020939 /* PANN_labels.json in Resources */ = {isa = PBXBuildFile; fileRef = 741B2DDD2497221600020939 /* PANN_labels.json */; };
-		741B2DE02497221C00020939 /* PANN_labels.json in Resources */ = {isa = PBXBuildFile; fileRef = 741B2DDF2497221C00020939 /* PANN_labels.json */; };
+		74C725A024A982D40010AC26 /* ring_hello.wav in Resources */ = {isa = PBXBuildFile; fileRef = 74C7259F24A982D40010AC26 /* ring_hello.wav */; };
+		74C725A324A982E20010AC26 /* PANN.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 74C725A124A982E20010AC26 /* PANN.mlmodel */; };
+		74C725A424A982E20010AC26 /* PANN.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 74C725A124A982E20010AC26 /* PANN.mlmodel */; };
+		74C725A524A982E20010AC26 /* PANN_labels.json in Resources */ = {isa = PBXBuildFile; fileRef = 74C725A224A982E20010AC26 /* PANN_labels.json */; };
+		74C725A624A982E20010AC26 /* PANN_labels.json in Resources */ = {isa = PBXBuildFile; fileRef = 74C725A224A982E20010AC26 /* PANN_labels.json */; };
+		74C725A824A982ED0010AC26 /* PANN_out.ring_hello.json in Resources */ = {isa = PBXBuildFile; fileRef = 74C725A724A982ED0010AC26 /* PANN_out.ring_hello.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,11 +49,10 @@
 		741B2DBB2496E94B00020939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		741B2DCB2496EC2700020939 /* DrawSpecView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawSpecView.swift; sourceTree = "<group>"; };
 		741B2DCD2496ED5100020939 /* ConvertSpectrogram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertSpectrogram.swift; sourceTree = "<group>"; };
-		741B2DD02496F21900020939 /* PANN_out.ring_hello.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PANN_out.ring_hello.json; sourceTree = "<group>"; };
-		741B2DD22496F21F00020939 /* ring_hello.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ring_hello.wav; sourceTree = "<group>"; };
-		741B2DD42496F22F00020939 /* PANN.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PANN.mlmodel; sourceTree = "<group>"; };
-		741B2DDD2497221600020939 /* PANN_labels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PANN_labels.json; sourceTree = "<group>"; };
-		741B2DDF2497221C00020939 /* PANN_labels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PANN_labels.json; sourceTree = "<group>"; };
+		74C7259F24A982D40010AC26 /* ring_hello.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ring_hello.wav; sourceTree = "<group>"; };
+		74C725A124A982E20010AC26 /* PANN.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PANN.mlmodel; sourceTree = "<group>"; };
+		74C725A224A982E20010AC26 /* PANN_labels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PANN_labels.json; sourceTree = "<group>"; };
+		74C725A724A982ED0010AC26 /* PANN_out.ring_hello.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PANN_out.ring_hello.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +99,8 @@
 				741B2DA62496E94800020939 /* ViewController.swift */,
 				741B2DCD2496ED5100020939 /* ConvertSpectrogram.swift */,
 				741B2DCB2496EC2700020939 /* DrawSpecView.swift */,
-				741B2DD42496F22F00020939 /* PANN.mlmodel */,
-				741B2DDD2497221600020939 /* PANN_labels.json */,
+				74C725A224A982E20010AC26 /* PANN_labels.json */,
+				74C725A124A982E20010AC26 /* PANN.mlmodel */,
 				741B2DA82496E94800020939 /* Main.storyboard */,
 				741B2DAB2496E94B00020939 /* Assets.xcassets */,
 				741B2DAD2496E94B00020939 /* LaunchScreen.storyboard */,
@@ -113,9 +112,8 @@
 		741B2DB82496E94B00020939 /* Pytorch-CoreML-Sound-ClassificationTests */ = {
 			isa = PBXGroup;
 			children = (
-				741B2DD02496F21900020939 /* PANN_out.ring_hello.json */,
-				741B2DDF2497221C00020939 /* PANN_labels.json */,
-				741B2DD22496F21F00020939 /* ring_hello.wav */,
+				74C7259F24A982D40010AC26 /* ring_hello.wav */,
+				74C725A724A982ED0010AC26 /* PANN_out.ring_hello.json */,
 				741B2DB92496E94B00020939 /* Pytorch_CoreML_Sound_ClassificationTests.swift */,
 				741B2DBB2496E94B00020939 /* Info.plist */,
 			);
@@ -206,7 +204,7 @@
 				741B2DAF2496E94B00020939 /* LaunchScreen.storyboard in Resources */,
 				741B2DAC2496E94B00020939 /* Assets.xcassets in Resources */,
 				741B2DAA2496E94800020939 /* Main.storyboard in Resources */,
-				741B2DDE2497221600020939 /* PANN_labels.json in Resources */,
+				74C725A524A982E20010AC26 /* PANN_labels.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,9 +212,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				741B2DD12496F21900020939 /* PANN_out.ring_hello.json in Resources */,
-				741B2DD32496F21F00020939 /* ring_hello.wav in Resources */,
-				741B2DE02497221C00020939 /* PANN_labels.json in Resources */,
+				74C725A024A982D40010AC26 /* ring_hello.wav in Resources */,
+				74C725A624A982E20010AC26 /* PANN_labels.json in Resources */,
+				74C725A824A982ED0010AC26 /* PANN_out.ring_hello.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,7 +228,7 @@
 				741B2DA72496E94800020939 /* ViewController.swift in Sources */,
 				741B2DCC2496EC2700020939 /* DrawSpecView.swift in Sources */,
 				741B2DA32496E94800020939 /* AppDelegate.swift in Sources */,
-				741B2DD52496F22F00020939 /* PANN.mlmodel in Sources */,
+				74C725A324A982E20010AC26 /* PANN.mlmodel in Sources */,
 				741B2DA52496E94800020939 /* SceneDelegate.swift in Sources */,
 				741B2DCE2496ED5100020939 /* ConvertSpectrogram.swift in Sources */,
 			);
@@ -240,7 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				741B2DD62496F22F00020939 /* PANN.mlmodel in Sources */,
+				74C725A424A982E20010AC26 /* PANN.mlmodel in Sources */,
 				741B2DBA2496E94B00020939 /* Pytorch_CoreML_Sound_ClassificationTests.swift in Sources */,
 				741B2DCF2496ED5100020939 /* ConvertSpectrogram.swift in Sources */,
 			);

@@ -17,16 +17,19 @@ class Pytorch_CoreML_Sound_ClassificationTests: XCTestCase {
     func test_labels() throws {
         
         let bundle = Bundle(for: Pytorch_CoreML_Sound_ClassificationTests.self)
-        let path = bundle.path(forResource: "PANN_label", ofType: "json")
+        let path = bundle.path(forResource: "PANN_labels", ofType: "json")
 
         var labels: NSArray?
         if let JSONData = try? Data(contentsOf: URL(fileURLWithPath: path!)) {
             labels = try! JSONSerialization.jsonObject(with: JSONData, options: .mutableContainers) as? NSArray
         }
-        
+        /*
         for i in 0..<labels!.count {
             print( "\(i) \(labels![i])")
         }
+        */
+        XCTAssertTrue( labels![0] as! String == "Speech", "incorrect first label!" )
+        XCTAssertTrue( labels![500] as! String == "Silence", "incorrect Silence label!" )
 
     }
     
@@ -147,17 +150,86 @@ class Pytorch_CoreML_Sound_ClassificationTests: XCTestCase {
             for j in 0..<spec_row.count {
                 let test_idx: [NSNumber] = [ 0, 0, NSNumber(value: i), NSNumber(value: j) ]
                 let val = output_spectrogram[ test_idx ].floatValue
-                XCTAssertLessThan( abs( val - spec_row[j].floatValue ), 15,
+                XCTAssertLessThan( abs( val - spec_row[j].floatValue ), 5,
                                    "spec vals different at \(i) \(j)! \(val), \(spec_row[j].floatValue)" )
             }
         }
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func test_convert_spectrogram() throws {
+        let spec_converter = SpectrogramConverter()
+
+        
+        // load our spectrogram from JSON
+        
+        let bundle = Bundle(for: Pytorch_CoreML_Sound_ClassificationTests.self)
+        let path = bundle.path(forResource: "PANN_out.ring_hello", ofType: "json")
+
+        var expected_outputs: NSArray?
+        if let JSONData = try? Data(contentsOf: URL(fileURLWithPath: path!)) {
+            expected_outputs = try! JSONSerialization.jsonObject(with: JSONData, options: .mutableContainers) as? NSArray
         }
+
+        let expected_spectrogram: [[NSNumber]] = expected_outputs![2] as! [[NSNumber]]
+        print( "expected spec: \(expected_spectrogram.count) \(expected_spectrogram[0].count)")
+
+
+        // copy data over to an allocated MLMultiArray
+        let spec_cols = expected_spectrogram.count
+        let spec_rows = expected_spectrogram[0].count
+        let array_shape = [ 1, 1, spec_cols as NSNumber, spec_rows as NSNumber ]
+        let spectrogram = try! MLMultiArray(shape: array_shape, dataType: MLMultiArrayDataType.float32 )
+        let ptr = UnsafeMutablePointer<Float32>(OpaquePointer(spectrogram.dataPointer))
+        for i in 0..<expected_spectrogram.count {
+            let spec_row = expected_spectrogram[i] as [NSNumber]
+
+            for j in 0..<spec_row.count {
+                ptr[ i*Int(spectrogram.strides[2]) + j] = Float32( spec_row[j] )
+            }
+        }
+        // call convert
+        let converted_spec = spec_converter.convertTo2DArray(from: spectrogram )
+        
+        // check shape, should be the same
+        XCTAssertTrue( converted_spec.count == spec_cols, "converted spec shape incorrect!" )
+        XCTAssertTrue( converted_spec[0].count == spec_rows, "converted spec shape incorrect!" )
+
+        // spot check the converted specs
+        XCTAssertTrue( converted_spec[0].min()! >= Float32(0.0), "converted spec min incorrect!" )
+        XCTAssertTrue( converted_spec[0].max()! <= Float32(1.0), "converted spec max incorrect!" )
+
     }
 
+    func test_inference_time() throws {
+        // This is an example of a performance test case.
+        let model = PANN()
+
+        let array_shape: [NSNumber] = [1, 12800]
+        let audioData = try! MLMultiArray(shape: array_shape, dataType: MLMultiArrayDataType.float32 )
+        let inputs: [String: Any] = [
+            "input.1": audioData,
+        ]
+        // container for ML Model inputs
+        let provider = try! MLDictionaryFeatureProvider(dictionary: inputs)
+
+        self.measure {
+            // Put the code you want to measure the time of here.
+            let N = 10
+            let start_time = CACurrentMediaTime()
+            let options = MLPredictionOptions()
+            // options.usesCPUOnly = true
+            for _ in 0..<N {
+                _ = try? model.model.prediction(
+                    from: provider,
+                    options: options
+                )
+            }
+            let elapsed = CACurrentMediaTime() - start_time
+            print( "avg inference time: \(elapsed/Double(N))")
+            /* simulator:
+                N = 10: avg inference time: 0.03517465239856392
+             */
+        }
+    }
 }
