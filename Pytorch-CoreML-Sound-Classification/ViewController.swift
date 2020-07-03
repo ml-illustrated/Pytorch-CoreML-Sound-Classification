@@ -227,8 +227,7 @@ class ViewController: UIViewController {
         let predicted_classes = [ row ]
         
         DispatchQueue.main.sync {
-            // show key points description
-            self.showKeypointsDescription(with: predicted_classes)
+            self.showPredictedClasses(with: predicted_classes)
         }
         
     
@@ -241,7 +240,7 @@ class ViewController: UIViewController {
         self.semaphore.signal()
     }
   }
-    func showKeypointsDescription(with predicted_classes : [OutputClass] ) {
+    func showPredictedClasses(with predicted_classes : [OutputClass] ) {
         self.tableData = predicted_classes
         // print( "data: \(predicted_classes[0])" )
         self.labelsTableView.reloadData()
